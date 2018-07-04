@@ -1,5 +1,7 @@
-﻿using G2CrowdRoster.Models;
+﻿using G2CrowdRoster.HttpClientUtil;
+using G2CrowdRoster.Models;
 using G2CrowdRoster.Services;
+using System.Net.Http;
 using System.Web.Mvc;
 
 namespace G2CrowdRoster.Controllers
@@ -8,8 +10,9 @@ namespace G2CrowdRoster.Controllers
 	{
 		private readonly G2CrowdDataService _g2CrowdDataService;
 		private readonly MemoryCaching _cache = MemoryCaching.Instance;
+		private readonly BasicHttpClient _httpClient = new BasicHttpClient();
 		public HomeController() {
-			_g2CrowdDataService = new G2CrowdDataService();
+			_g2CrowdDataService = new G2CrowdDataService(_cache,_httpClient);
 		}
 		public ActionResult Index()
 		{
@@ -19,7 +22,6 @@ namespace G2CrowdRoster.Controllers
 			return View(g2crowdRosterData);
 		}
 
-		//[HttpPost]
 		[AllowAnonymous]
 		public ActionResult Vote(G2CrowdPersonalData personalData)
 		{

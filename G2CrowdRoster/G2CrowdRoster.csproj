@@ -199,6 +199,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HttpClientUtil\BasicHttpClient.cs" />
+    <Compile Include="HttpClientUtil\IHttpClient.cs" />
     <Compile Include="Models\G2CrowdPersonalData.cs" />
     <Compile Include="Models\G2RosterModel.cs" />
     <Compile Include="Models\VotedModel.cs" />

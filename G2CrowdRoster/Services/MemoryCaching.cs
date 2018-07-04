@@ -10,6 +10,8 @@ namespace G2CrowdRoster.Services
 	{
 		public MemoryCache _cacheObject = MemoryCache.Default;
 		static readonly MemoryCaching _instance = new MemoryCaching();
+
+		//Singleton
 		public static MemoryCaching Instance
 		{
 			get
