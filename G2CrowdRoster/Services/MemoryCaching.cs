@@ -9,15 +9,25 @@ namespace G2CrowdRoster.Services
 	public sealed class MemoryCaching
 	{
 		public MemoryCache _cacheObject = MemoryCache.Default;
-		static readonly MemoryCaching _instance = new MemoryCaching();
+		static MemoryCaching _instance;
+		private static object objectlock = new object();
 
 		//Singleton
 		public static MemoryCaching Instance
 		{
 			get
 			{
-				return _instance;
+				lock (objectlock) //single - check lock
+				{
+					if (_instance == null)
+					{
+						_instance = new MemoryCaching();
+					}
+
+					return _instance;
+				}
 			}
+
 		}
 	}
 }

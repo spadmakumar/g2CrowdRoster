@@ -56,7 +56,6 @@ namespace G2CrowdRoster.Services
 			foreach (var data in g2Roster.G2CrowdRoster) {
 				if (data.Name == personalData.Name) {
 					data.Number_Of_Votes++;
-					data.Voted = true;
 				}
 			}
 			_cache._cacheObject.Set("g2Roster", g2Roster,new CacheItemPolicy());

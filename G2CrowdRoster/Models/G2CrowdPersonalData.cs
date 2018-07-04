@@ -12,6 +12,5 @@ namespace G2CrowdRoster.Models
 		public string Title { get; set; }
 		public string Bio { get; set; }
 		public int Number_Of_Votes { get; set; }
-		public bool Voted { get; set; }
 	}
 }
