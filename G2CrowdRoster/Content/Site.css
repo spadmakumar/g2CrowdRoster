@@ -27,16 +27,25 @@ textarea {
 }
 
 .vote-padding {
-    padding-top: 110px;
+    padding-top: 90px;
     font-weight:bold;
 }
 
-h2{
+h1{
     color:coral
 }
 
 .not-voted{
     display:none;
+}
+
+.separation 
+{
+    border-bottom:1px solid #CCC;
+    float:left;
+    width:100%;
+    padding-bottom:3px;
+    margin-bottom:30px;
 }
 
 .voted {
@@ -48,8 +57,4 @@ body{padding-top:30px;}
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
-small {
-display: block;
-line-height: 1.428571429;
-color: #999;
-}
+
