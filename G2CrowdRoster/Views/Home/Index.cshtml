@@ -1,0 +1,42 @@
+﻿@model G2CrowdRoster.Models.G2RosterModel
+
+@{
+    ViewBag.Title = "G2 Crowd Team Roster";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@foreach (var element in Model.G2CrowdRoster)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <img src=@Html.DisplayFor(m => element.Image_Url) alt="" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <h4>
+                                @Html.DisplayFor(m => element.Name)
+                            </h4>
+                            <small>
+                                <cite title>
+                                    @Html.DisplayFor(m => element.Title)
+                                </cite>
+                            </small>
+                            <p>
+                                @Html.DisplayFor(m => element.Bio)
+                            </p>
+                            @*@{Html.RenderPartial("VotePartial",element); }*@
+                            <p class="vote-padding">Want to Work with @Html.DisplayFor(m => element.Name)?<a href="@Url.Action("Vote", "Home",element))"><img src="~/Images/thumbs-up.svg" style="border-color: deepskyblue" class="thumbs-up" alt="" /></a><label id="inputs-for-A" class="@(Session[element.Name]!=null ? "voted" : "not-voted")">Yes!</label></p>
+                            <p>@Html.DisplayFor(m => element.Number_Of_Votes) people have said Yes!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
