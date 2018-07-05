@@ -41,7 +41,7 @@ namespace G2Crowd.Tests
 		}
 
 		[TestMethod]
-		public void GetEmployee_Should_Return_Cached_Data_With_Updated_Votes()
+		public void UpdateVotingInfo_Should_Return_Cached_Data_With_Updated_Votes()
 		{
 			var _cacheInstance = MemoryCaching.Instance;
 			BasicHttpClient _httpClient = new BasicHttpClient(CreateFakeResponseHandler());
