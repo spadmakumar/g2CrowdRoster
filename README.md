@@ -18,6 +18,6 @@ Persisiting Voting Info:
 4) As per the requirement document, I am not stopping the voter to vote multiple times, but only letting him know that he has voted.
 
 Running the App:
-1) You need an IIS server to run the app.
+1) You need an IIS server (8) to run the app.
 2) Best IDE to be used:Visual Studio 2015.
 3) Solution is not published anywhere.
