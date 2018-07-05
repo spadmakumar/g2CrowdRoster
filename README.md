@@ -21,3 +21,6 @@ Running the App:
 1) You need an IIS server (8) to run the app.
 2) Best IDE to be used:Visual Studio 2015.
 3) Solution is not published anywhere.
+
+LocalPort:
+http://localhost:56062/
